@@ -14,18 +14,18 @@ const protect = (req, res, next) => {
             // Verify token
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-            // Add user from payload (placeholder logic)
+            // Add user from payload
             req.user = decoded;
 
-            next();
+            return next();
         } catch (error) {
             console.error(error);
-            res.status(401).json({ message: 'Not authorized' });
+            return res.status(401).json({ message: 'Not authorized' });
         }
     }
 
     if (!token) {
-        res.status(401).json({ message: 'Not authorized, no token' });
+        return res.status(401).json({ message: 'Not authorized, no token' });
     }
 };
 

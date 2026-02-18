@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Reminder = require("../models/reminder.model");
+const Reminder = require("../models/reminderModel");
 
 /* -------------------- HELPERS -------------------- */
 

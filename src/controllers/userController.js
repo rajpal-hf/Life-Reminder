@@ -17,6 +17,7 @@ const generateToken = (userId) => {
 // signup + login (phone based)
 const verifyPhone = async (req, res) => {
   try {
+    console.log("Xxxxxxxxxxxxxxxxxxxxxxx");
     const { phone, countryCode = "+91", otp } = req.body;
 
     // ---------------- VALIDATION ----------------

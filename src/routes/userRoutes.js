@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { verifyPhone, getUsers } = require('../controllers/userController');
+const { verifyPhone } = require('../controllers/userController');
 
-router.post('/verify-phone', verifyPhone);
+router.post('/', verifyPhone);
 
 module.exports = router;
